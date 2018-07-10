@@ -2,12 +2,13 @@
 namespace IceAgency\PostTypeFields;
 
 use ReflectionClass;
-use Interfaces\HasAcfFields;
+use IceAgency\PostTypeFields\Interfaces\HasAcfFields;
+use IceAgency\PostTypeFields\AcfFieldGroups\FieldGroup;
 use Rareloop\Lumberjack\Providers\ServiceProvider;
 use Rareloop\Lumberjack\Config;
 use Tightenco\Collect\Support\Collection;
 
-class ACFFieldImportProvider extends ServiceProvider
+class PostTypeFieldsServiceProvider extends ServiceProvider
 {
     public function boot(Config $config)
     {
@@ -31,7 +32,7 @@ class ACFFieldImportProvider extends ServiceProvider
         $fieldsConfig = collect($postTypeClass::getFieldConfig());
         $postType = $postTypeClass::getPostType();
 
-        $field_group = new FieldGroup($postType);
+        $field_group = FieldGroup::create($postType);
 
         foreach ($fieldsConfig as $field) {
             $field_group->addField($field);

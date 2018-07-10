@@ -26,7 +26,16 @@ class FieldGroup
     }
 
     public function addField($field) {
-        $this->fields[] = $field->toArray();
+        $this->fields[] = $field->addKey($this->key)->toArray();
         return $this;
+    }
+
+    public function toArray() : array {
+        return [
+            'key' => $this->key,
+            'title' => $this->title,
+            'location' => $this->location,
+            'fields' => $this->fields
+        ];
     }
 }

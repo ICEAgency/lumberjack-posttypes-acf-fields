@@ -2,9 +2,9 @@
 
 namespace IceAgency\PostTypeFields\AcfFields;
 
-use Field;
+use IceAgency\PostTypeFields\AcfFields\Field;
 
-class TextField extends Field
+class TextAreaField extends Field
 {
-
+    public static $type = 'textarea';
 }
