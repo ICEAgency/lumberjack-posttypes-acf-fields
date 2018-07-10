@@ -22,7 +22,7 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
     ```
     'providers' => [
         ...
-        IceAgency\PostTypeFields\ServiceProvider::class
+        IceAgency\PostTypeFields\ServiceProvider::class,
         ...
     ]
     ```
