@@ -44,7 +44,6 @@ class PostTypeFieldsServiceProvider extends ServiceProvider
     private function postTypeHasAcfFields(string $postTypeClass)
     {
         $class = new ReflectionClass($postTypeClass);
-
         return $class->implementsInterface(HasAcfFields::class);
     }
 }
