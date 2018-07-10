@@ -18,6 +18,7 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
 2. Install via Composer:
 ```composer require iceagency/lumberjack-posttypes-acf-fields```
 3. Add the provider within ```web/app/themes/lumberjack/app/config/app.php```
+
 ```'providers' => [
         ...
         IceAgency\PostTypeFields\ServiceProvider::class
@@ -27,13 +28,16 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
 ## Getting Started
 
 1. Register your Post Type within ```web/app/themes/lumberjack/app/config/posttypes.php```
+
 ```'register' => [
         ...
         App\PostTypes\YourPostType::class,
         ...
     ]```
+
 2. Create your Post Type class within ```web/app/themes/lumberjack/app/PostTypes/YourPostType.php```
 3. Add a static method to define your field configuration, as follows:
+
 ```public static function getFieldConfig()
    {
         return [
