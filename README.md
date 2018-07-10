@@ -80,15 +80,15 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
 
 ## Field Methods
 
-*create($name)*
+**create($name)**
 
 Create a field with the name given, this is the name that is used to retrieve the data with ACF's get_field() function
 
-*withLabel($label)*
+**withLabel($label)**
 
 Used to set the label for the field within the WordPress Admin area.
 
-*isRequired()*
+**isRequired()**
 
 Used to make the field required.
 
