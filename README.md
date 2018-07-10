@@ -77,6 +77,7 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
 
 * Text: ``` IceAgency\PostTypeFields\AcfFields\TextField; ```
 * Text Area: ``` IceAgency\PostTypeFields\AcfFields\TextField; ```
+* Image: ``` IceAgency\PostTypeFields\AcfFields\ImageField; ```
 
 ## Field Methods
 
@@ -87,6 +88,10 @@ Create a field with the name given, this is the name that is used to retrieve th
 **withLabel($label)**
 
 Used to set the label for the field within the WordPress Admin area.
+
+**withPlaceholder($placeholder)**
+
+Used to set the placeholder for the field within the WordPress Admin area. (Please note, this is only possible on Text, TextArea, Number, Email, URL and Password)
 
 **isRequired()**
 

@@ -4,7 +4,7 @@ namespace IceAgency\PostTypeFields\AcfFields;
 
 use IceAgency\PostTypeFields\AcfFields\Field;
 
-class TextAreaField extends Field
+class PasswordField extends Field
 {
-    public $type = 'textarea';
+    public $type = 'password';
 }
