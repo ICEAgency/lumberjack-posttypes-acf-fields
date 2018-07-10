@@ -19,27 +19,32 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
 ```composer require iceagency/lumberjack-posttypes-acf-fields```
 3. Add the provider within ```web/app/themes/lumberjack/app/config/app.php```
 
-```'providers' => [
+    ```
+    'providers' => [
         ...
         IceAgency\PostTypeFields\ServiceProvider::class
         ...
-    ]```
+    ]
+    ```
 
 ## Getting Started
 
 1. Register your Post Type within ```web/app/themes/lumberjack/app/config/posttypes.php```
 
-```'register' => [
+    ```
+    'register' => [
         ...
         App\PostTypes\YourPostType::class,
         ...
-    ]```
+    ]
+    ```
 
 2. Create your Post Type class within ```web/app/themes/lumberjack/app/PostTypes/YourPostType.php```
 3. Add a static method to define your field configuration, as follows:
 
-```public static function getFieldConfig()
-   {
+    ```
+    public static function getFieldConfig()
+    {
         return [
             TextField::create('text_field_name')
             ->withLabel('Text Field Label')
@@ -47,7 +52,8 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
             TextAreaField::create('textarea_field_name')
             ->withLabel('Textarea Field Label')
         ]
-   }```
+   }
+   ```
 
 ## Field Types
 
