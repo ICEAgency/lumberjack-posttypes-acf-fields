@@ -4,6 +4,14 @@ A Service Provider for the [Lumberjack](https://github.com/Rareloop/lumberjack) 
 
 Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co.uk)
 
+Please note, this repo is not ready for production.
+
+## Roadmap
+
+1. Add support for repeater fields
+2. Add support for all field types that ACF offers
+3. Update documentation
+
 ## Requirements
 
 * PHP >=7.0
