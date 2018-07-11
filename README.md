@@ -8,7 +8,8 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
 
 * PHP >=7.0
 * Installation via Composer
-* Advanced Custom Fields Pro
+* [Lumberjack](https://github.com/Rareloop/lumberjack)
+* [Advanced Custom Fields Pro](https://wordpress.org/plugins/advanced-custom-fields/)
 
 ## Installing
 
