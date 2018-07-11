@@ -14,8 +14,6 @@ Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co
 ## Installing
 
 1. Install Lumberjack, see the guide [here](https://github.com/Rareloop/lumberjack).
-2. Add your Advanced Custom Fields Pro key to your .env file
-```ACF_PRO_KEY=YOUR_KEY_HERE```
 2. Install via Composer:
 ```composer require iceagency/lumberjack-posttypes-acf-fields```
 3. Add the provider within ```web/app/themes/lumberjack/app/config/app.php```
