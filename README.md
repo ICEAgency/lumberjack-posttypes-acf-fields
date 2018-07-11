@@ -118,7 +118,8 @@ Add a default value to the field.
 
 Used to set the placeholder for the field within the WordPress Admin area. (Please note, this is only possible on Text, TextArea, Number, Email, URL and Password)
 
-## Specific Field Methods
+
+## Individual Field Methods
 
 ### Text
 
@@ -134,6 +135,7 @@ Set field as read-only.
 
 Set field as disabled.
 
+
 ### TextArea
 
 **withMaxLength($max_length)**
@@ -147,6 +149,7 @@ Set field as read-only.
 **isDisabled()**
 
 Set field as disabled.
+
 
 ### Image
 
@@ -182,17 +185,20 @@ Comma-seperated list of mime types (e.g. "image/png,image/jpg,image/gif")
 
 Set the format that is returned, choose from "array", "url" or "id"
 
+
 ### True/False
 
 **withMessage($message)**
 
 Set the message that appears with the checkbox
 
+
 ### Checkbox
 
 **withOptions($options)**
 
 Set the checkbox items that appear, $options should be an array where the key is the checkbox value and the value represents the label of the checkbox.
+
 
 ### File
 
@@ -212,6 +218,7 @@ Comma-seperated list of mime types (e.g. "image/png,image/jpg,image/gif")
 
 Set the format that is returned, choose from "array", "url" or "id"
 
+
 ### Number
 
 **withMin($min)**
@@ -225,6 +232,7 @@ Set maximum number (accepts integer).
 **withStep($step)**
 
 Set how many numbers are skipped when arrows are clicked (accepts integer).
+
 
 ### Page Link
 
@@ -243,6 +251,7 @@ Set if the select can be set as null.
 **isMultiple()**
 
 Allow the user to select multiple options.
+
 
 ### Post Object
 
@@ -266,11 +275,13 @@ Allow the user to select multiple options.
 
 Choose the format that should be returned, choose between "object" and "id"
 
+
 ### Radio
 
 **withOptions($options)**
 
 Set the checkbox items that appear, $options should be an array where the key is the checkbox value and the value represents the label of the checkbox.
+
 
 ### Select
 
@@ -286,6 +297,7 @@ Set if the select can be set as null.
 
 Allow the user to select multiple options.
 
+
 ### User
 
 **withRoles($roles)**
@@ -299,6 +311,7 @@ Set if the select can be set as null.
 **isMultiple()**
 
 Allow the user to select multiple options.
+
 
 ### WYSIWYG
 
