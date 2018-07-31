@@ -1,9 +1,9 @@
 <?php
-namespace IceAgency\PostTypeFields;
+namespace IceAgency\Lumberjack\Providers;
 
 use ReflectionClass;
-use IceAgency\PostTypeFields\Interfaces\HasAcfFields;
-use IceAgency\PostTypeFields\AcfFieldGroups\FieldGroup;
+use IceAgency\Lumberjack\Interfaces\HasAcfFields;
+use IceAgency\Lumberjack\AcfFieldGroups\FieldGroup;
 use Rareloop\Lumberjack\Providers\ServiceProvider;
 use Rareloop\Lumberjack\Config;
 use Tightenco\Collect\Support\Collection;

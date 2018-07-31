@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "IceAgency\\PostTypeFields\\": "src"
+            "IceAgency\\Lumberjack\\": "src"
         }
     }
 }

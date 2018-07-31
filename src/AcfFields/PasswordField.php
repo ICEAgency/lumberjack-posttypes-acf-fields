@@ -1,8 +1,8 @@
 <?php
 
-namespace IceAgency\PostTypeFields\AcfFields;
+namespace IceAgency\Lumberjack\AcfFields;
 
-use IceAgency\PostTypeFields\AcfFields\Field;
+use IceAgency\Lumberjack\AcfFields\Field;
 
 class PasswordField extends Field
 {

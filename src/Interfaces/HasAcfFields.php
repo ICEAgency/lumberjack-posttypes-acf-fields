@@ -1,6 +1,6 @@
 <?php
 
-namespace IceAgency\PostTypeFields\Interfaces;
+namespace IceAgency\Lumberjack\Interfaces;
 
 interface HasAcfFields
 {

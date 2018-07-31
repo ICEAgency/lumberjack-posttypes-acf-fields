@@ -1,6 +1,6 @@
 <?php
 
-namespace IceAgency\PostTypeFields\AcfFieldGroups;
+namespace IceAgency\Lumberjack\AcfFieldGroups;
 
 class FieldGroup
 {

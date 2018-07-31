@@ -1,17 +1,17 @@
 <?php
 
-namespace IceAgency\PostTypeFields\AcfFields;
+namespace IceAgency\Lumberjack\AcfFields;
 
 use Exception;
 
-use IceAgency\PostTypeFields\AcfFields\TextField;
-use IceAgency\PostTypeFields\AcfFields\TextAreaField;
-use IceAgency\PostTypeFields\AcfFields\NumberField;
-use IceAgency\PostTypeFields\AcfFields\EmailField;
-use IceAgency\PostTypeFields\AcfFields\UrlField;
-use IceAgency\PostTypeFields\AcfFields\PasswordField;
-use IceAgency\PostTypeFields\AcfFields\ImageField;
-use IceAgency\PostTypeFields\AcfFields\WysiwygField;
+use IceAgency\Lumberjack\AcfFields\TextField;
+use IceAgency\Lumberjack\AcfFields\TextAreaField;
+use IceAgency\Lumberjack\AcfFields\NumberField;
+use IceAgency\Lumberjack\AcfFields\EmailField;
+use IceAgency\Lumberjack\AcfFields\UrlField;
+use IceAgency\Lumberjack\AcfFields\PasswordField;
+use IceAgency\Lumberjack\AcfFields\ImageField;
+use IceAgency\Lumberjack\AcfFields\WysiwygField;
 
 class Field
 {

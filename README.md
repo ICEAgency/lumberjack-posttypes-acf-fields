@@ -24,12 +24,12 @@ Please note, this repo is not ready for production.
 1. Install Lumberjack, see the guide [here](https://github.com/Rareloop/lumberjack).
 2. Install via Composer:
 ```composer require iceagency/lumberjack-posttypes-acf-fields```
-3. Add the provider within ```web/app/themes/lumberjack/app/config/app.php```
+3. Add the provider within ```web/app/themes/lumberjack/config/app.php```
 
     ```
     'providers' => [
         ...
-        IceAgency\PostTypeFields\PostTypeFieldsServiceProvider::class,
+        IceAgency\Lumberjack\Providers\PostTypeFieldsServiceProvider::class,
         ...
     ]
     ```
@@ -50,7 +50,7 @@ Please note, this repo is not ready for production.
 3. Add the ```HasACFFields``` interface to your Post Type
 
     ```
-    use IceAgency\PostTypeFields\Interfaces\HasAcfFields;
+    use IceAgency\Lumberjack\Interfaces\HasAcfFields;
 
     class YourPostType extends Post implements HasAcfFields
     {
@@ -61,8 +61,8 @@ Please note, this repo is not ready for production.
 4. For each field type you need to use, ensure that you include the relevent classes at the top of your Post Type class, for this example:
 
     ```
-    use IceAgency\PostTypeFields\AcfFields\TextField;
-    use IceAgency\PostTypeFields\AcfFields\TextAreaField;
+    use IceAgency\Lumberjack\AcfFields\TextField;
+    use IceAgency\Lumberjack\AcfFields\TextAreaField;
     ```
 
 5. Add a static method to define your field configuration, as follows:
@@ -82,22 +82,22 @@ Please note, this repo is not ready for production.
 
 ## Field Types
 
-* Text: ``` IceAgency\PostTypeFields\AcfFields\TextField ```
-* Text Area: ``` IceAgency\PostTypeFields\AcfFields\TextField ```
-* Image: ``` IceAgency\PostTypeFields\AcfFields\ImageField ```
-* True/False: ``` IceAgency\PostTypeFields\AcfFields\BoolField ```
-* Checkbox: ``` IceAgency\PostTypeFields\AcfFields\CheckboxField ```
-* Email: ``` IceAgency\PostTypeFields\AcfFields\EmailField ```
-* File: ``` IceAgency\PostTypeFields\AcfFields\FileField ```
-* Number: ``` IceAgency\PostTypeFields\AcfFields\NumberField ```
-* Page Link: ``` IceAgency\PostTypeFields\AcfFields\PageLinkField ```
-* Password: ``` IceAgency\PostTypeFields\AcfFields\PasswordField ```
-* Post Object: ``` IceAgency\PostTypeFields\AcfFields\PostObjectField ```
-* Radio: ``` IceAgency\PostTypeFields\AcfFields\RadioField ```
-* Select: ``` IceAgency\PostTypeFields\AcfFields\SelectField ```
-* URL: ``` IceAgency\PostTypeFields\AcfFields\UrlField ```
-* User: ``` IceAgency\PostTypeFields\AcfFields\UserField ```
-* WYSIWYG: ``` IceAgency\PostTypeFields\AcfFields\WysiwygField ```
+* Text: ``` IceAgency\Lumberjack\AcfFields\TextField ```
+* Text Area: ``` IceAgency\Lumberjack\AcfFields\TextField ```
+* Image: ``` IceAgency\Lumberjack\AcfFields\ImageField ```
+* True/False: ``` IceAgency\Lumberjack\AcfFields\BoolField ```
+* Checkbox: ``` IceAgency\Lumberjack\AcfFields\CheckboxField ```
+* Email: ``` IceAgency\Lumberjack\AcfFields\EmailField ```
+* File: ``` IceAgency\Lumberjack\AcfFields\FileField ```
+* Number: ``` IceAgency\Lumberjack\AcfFields\NumberField ```
+* Page Link: ``` IceAgency\Lumberjack\AcfFields\PageLinkField ```
+* Password: ``` IceAgency\Lumberjack\AcfFields\PasswordField ```
+* Post Object: ``` IceAgency\Lumberjack\AcfFields\PostObjectField ```
+* Radio: ``` IceAgency\Lumberjack\AcfFields\RadioField ```
+* Select: ``` IceAgency\Lumberjack\AcfFields\SelectField ```
+* URL: ``` IceAgency\Lumberjack\AcfFields\UrlField ```
+* User: ``` IceAgency\Lumberjack\AcfFields\UserField ```
+* WYSIWYG: ``` IceAgency\Lumberjack\AcfFields\WysiwygField ```
 
 
 ## Generic Field Methods
