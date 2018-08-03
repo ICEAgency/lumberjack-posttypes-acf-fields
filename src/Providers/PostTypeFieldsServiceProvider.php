@@ -10,11 +10,13 @@ use Tightenco\Collect\Support\Collection;
 
 class PostTypeFieldsServiceProvider extends ServiceProvider
 {
-    public function boot(Config $config)
+    public function boot()
     {
         if (!function_exists('acf_add_local_field_group')) {
             return;
         }
+
+        $config = $this->app->get(Config::class);
 
         collect($config->get('posttypes.register'))->each(function ($postTypeClass) {
             if (!$this->postTypeHasAcfFields($postTypeClass)) {
