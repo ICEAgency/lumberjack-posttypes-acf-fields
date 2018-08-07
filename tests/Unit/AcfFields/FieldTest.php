@@ -78,6 +78,54 @@ class FieldTest extends TestCase
         $this->assertEquals($field->default_value, "Example");
     }
 
+    public function testPlaceholderErrorsForInvalidFieldType()
+    {
+        $field_name = 'example_field';
+        $field = Field::create($field_name);
+        $field->type = 'invalid';
+
+        $this->expectException(Exception::class);
+        $field->withPlaceholder('Some placeholder');
+
+        $this->assertNull($field->placeholder);
+    }
+
+    public function testMaxLengthErrorsForInvalidFieldType()
+    {
+        $field_name = 'example_field';
+        $field = Field::create($field_name);
+        $field->type = 'invalid';
+
+        $this->expectException(Exception::class);
+        $field->withMaxLength(100);
+
+        $this->assertNull($field->max_length);
+    }
+
+    public function testReadOnlyErrorsForInvalidFieldType()
+    {
+        $field_name = 'example_field';
+        $field = Field::create($field_name);
+        $field->type = 'invalid';
+
+        $this->expectException(Exception::class);
+        $field->isReadOnly();
+
+        $this->assertNull($field->readonly);
+    }
+
+    public function testDisabledErrorsForInvalidFieldType()
+    {
+        $field_name = 'example_field';
+        $field = Field::create($field_name);
+        $field->type = 'invalid';
+
+        $this->expectException(Exception::class);
+        $field->isDisabled();
+
+        $this->assertNull($field->disabled);
+    }
+
     public function testAddKey()
     {
         $field_name = 'example_field';

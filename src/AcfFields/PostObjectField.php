@@ -2,6 +2,8 @@
 
 namespace IceAgency\Lumberjack\AcfFields;
 
+use Exception;
+
 use IceAgency\Lumberjack\AcfFields\Field;
 
 class PostObjectField extends Field

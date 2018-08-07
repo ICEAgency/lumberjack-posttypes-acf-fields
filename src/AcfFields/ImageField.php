@@ -4,6 +4,8 @@ namespace IceAgency\Lumberjack\AcfFields;
 
 use IceAgency\Lumberjack\AcfFields\Field;
 
+use Exception;
+
 class ImageField extends Field
 {
     public $type = 'image';

@@ -4,6 +4,8 @@ namespace IceAgency\Lumberjack\Test\Unit\AcfFields;
 
 use PHPUnit\Framework\TestCase;
 
+use Exception;
+
 use IceAgency\Lumberjack\AcfFields\SelectField;
 
 class SelectFieldTest extends TestCase
@@ -22,6 +24,17 @@ class SelectFieldTest extends TestCase
             '1' => 'Option 1',
             '2' => 'Option 2'
         ]);
+    }
+
+    public function testEmptyOptions()
+    {
+        $field_name = 'example_field';
+        $field = SelectField::create($field_name);
+
+        $this->expectException(Exception::class);
+        $field->withOptions();
+
+        $this->assertNull($field->options);
     }
 
     public function testAllowNull()

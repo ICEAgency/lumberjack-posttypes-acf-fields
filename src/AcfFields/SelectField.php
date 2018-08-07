@@ -2,6 +2,8 @@
 
 namespace IceAgency\Lumberjack\AcfFields;
 
+use Exception;
+
 use IceAgency\Lumberjack\AcfFields\Field;
 
 class SelectField extends Field
@@ -12,7 +14,7 @@ class SelectField extends Field
     public $allow_null = 0;
     public $multiple = 0;
 
-    public function withOptions($options)
+    public function withOptions($options = '')
     {
         if (!is_array($options)) {
             throw new Exception('You must provide an array of options with a SelectField');

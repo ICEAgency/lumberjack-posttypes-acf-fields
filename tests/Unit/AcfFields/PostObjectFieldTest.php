@@ -4,6 +4,8 @@ namespace IceAgency\Lumberjack\Test\Unit\AcfFields;
 
 use PHPUnit\Framework\TestCase;
 
+use Exception;
+
 use IceAgency\Lumberjack\AcfFields\PostObjectField;
 
 class PostObjectFieldTest extends TestCase
@@ -60,6 +62,16 @@ class PostObjectFieldTest extends TestCase
         $field->withReturnFormat('id');
 
         $this->assertEquals($field->return_format, 'id');
+    }
+
+    public function testInvalidReturnFormat()
+    {
+        $field_name = 'example_field';
+        $field = PostObjectField::create($field_name);
+
+        $this->expectException(Exception::class);
+        $field->withReturnFormat('other');
+        $this->assertNull($field->return_format);
     }
 
     public function testOptionalData()
