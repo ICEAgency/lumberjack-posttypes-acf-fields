@@ -14,7 +14,7 @@ class SelectField extends Field
 
     public function withOptions($options)
     {
-        if(!is_array($options)) {
+        if (!is_array($options)) {
             throw new Exception('You must provide an array of options with a SelectField');
         }
 
