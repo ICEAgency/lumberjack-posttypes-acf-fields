@@ -30,6 +30,15 @@ class FieldGroupTest extends TestCase
         ]);
     }
 
+    public function testCreateFieldGroupWithoutName()
+    {
+        $post_type_name = '';
+        $this->expectException(Exception::class);
+        $field_group = FieldGroup::create($post_type_name);
+
+        $this->assertNull($field_group);
+    }
+
     public function testAddField()
     {
         $post_type_name = 'post';

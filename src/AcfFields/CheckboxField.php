@@ -4,13 +4,15 @@ namespace IceAgency\Lumberjack\AcfFields;
 
 use IceAgency\Lumberjack\AcfFields\Field;
 
+use Exception;
+
 class CheckboxField extends Field
 {
     public $type = 'checkbox';
 
     public $options = [];
 
-    public function withOptions($options)
+    public function withOptions($options = '')
     {
         if (!is_array($options)) {
             throw new Exception('You must provide an array of options with a CheckboxField');

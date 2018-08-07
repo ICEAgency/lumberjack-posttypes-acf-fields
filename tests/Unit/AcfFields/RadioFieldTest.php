@@ -6,6 +6,8 @@ use PHPUnit\Framework\TestCase;
 
 use IceAgency\Lumberjack\AcfFields\RadioField;
 
+use Exception;
+
 class RadioFieldTest extends TestCase
 {
     public function testOptions()
@@ -22,6 +24,17 @@ class RadioFieldTest extends TestCase
             '1' => 'Option 1',
             '2' => 'Option 2'
         ]);
+    }
+
+    public function testEmptyOptions()
+    {
+        $field_name = 'example_field';
+        $field = RadioField::create($field_name);
+
+        $this->expectException(Exception::class);
+        $field->withOptions();
+
+        $this->assertNull($field->options);
     }
 
     public function testOptionalData()

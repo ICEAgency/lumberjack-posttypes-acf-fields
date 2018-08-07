@@ -4,6 +4,8 @@ namespace IceAgency\Lumberjack\Test\Unit\AcfFields;
 
 use PHPUnit\Framework\TestCase;
 
+use Exception;
+
 use IceAgency\Lumberjack\AcfFields\WysiwygField;
 
 class WysiwygFieldTest extends TestCase
@@ -26,6 +28,16 @@ class WysiwygFieldTest extends TestCase
         $this->assertEquals($field->tabs, 'text');
     }
 
+    public function testInvalidTabs()
+    {
+        $field_name = 'example_field';
+        $field = WysiwygField::create($field_name);
+
+        $this->expectException(Exception::class);
+        $field->withTabs('other');
+        $this->assertNull($field->tabs);
+    }
+
     public function testToolbar()
     {
         $field_name = 'example_field';
@@ -38,6 +50,16 @@ class WysiwygFieldTest extends TestCase
         $field->withToolbar('basic');
 
         $this->assertEquals($field->toolbar, 'basic');
+    }
+
+    public function testInvalidToolbar()
+    {
+        $field_name = 'example_field';
+        $field = WysiwygField::create($field_name);
+
+        $this->expectException(Exception::class);
+        $field->withToolbar('other');
+        $this->assertNull($field->toolbar);
     }
 
     public function testCanUploadMedia()
