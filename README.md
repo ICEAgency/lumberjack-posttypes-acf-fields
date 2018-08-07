@@ -1,5 +1,10 @@
 # Post Type Fields for Lumberjack
 
+[![Latest Stable Version](https://poser.pugx.org/iceagency/lumberjack-posttypes-acf-fields/v/stable)](https://packagist.org/packages/iceagency/lumberjack-posttypes-acf-fields)
+[![Coverage Status](https://coveralls.io/repos/github/ICEAgency/lumberjack-posttypes-acf-fields/badge.svg?branch=master)](https://coveralls.io/github/ICEAgency/lumberjack-posttypes-acf-fields?branch=master)
+[![Total Downloads](https://poser.pugx.org/iceagency/lumberjack-posttypes-acf-fields/downloads)](https://packagist.org/packages/iceagency/lumberjack-posttypes-acf-fields)
+[![License](https://poser.pugx.org/iceagency/lumberjack-posttypes-acf-fields/license)](https://packagist.org/packages/iceagency/lumberjack-posttypes-acf-fields)
+
 A Service Provider for the [Lumberjack](https://github.com/Rareloop/lumberjack) framework that allows you to define fields for your custom post types.
 
 Written & maintained by the team at [The ICE Agency](https://www.theiceagency.co.uk)

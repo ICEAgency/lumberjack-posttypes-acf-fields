@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace IceAgency\Lumberjack\Test\Unit\Mocks;
 

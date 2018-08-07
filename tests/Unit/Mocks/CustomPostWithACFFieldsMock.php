@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace IceAgency\Lumberjack\Test\Unit\Mocks;
 
@@ -19,7 +19,7 @@ class CustomPostWithACFFieldsMock extends Post implements HasAcfFields
             'not' => 'empty',
         ];
     }
-    
+
     public static function getFieldConfig() : array
     {
         return [
