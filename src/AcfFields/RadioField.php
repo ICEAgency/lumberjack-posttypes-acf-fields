@@ -10,8 +10,9 @@ class RadioField extends Field
 
     public $options = [];
 
-    public function withOptions($options) {
-        if(!is_array($options)) {
+    public function withOptions($options)
+    {
+        if (!is_array($options)) {
             throw new Exception('You must provide an array of options with a RadioField');
         }
 
@@ -19,7 +20,8 @@ class RadioField extends Field
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         $data['choices'] = $this->options;

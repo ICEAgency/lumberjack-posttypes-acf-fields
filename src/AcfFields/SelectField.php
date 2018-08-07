@@ -12,7 +12,8 @@ class SelectField extends Field
     public $allow_null = 0;
     public $multiple = 0;
 
-    public function withOptions($options) {
+    public function withOptions($options)
+    {
         if(!is_array($options)) {
             throw new Exception('You must provide an array of options with a SelectField');
         }
@@ -21,17 +22,20 @@ class SelectField extends Field
         return $this;
     }
 
-    public function allowNull() {
+    public function allowNull()
+    {
         $this->allow_null = 1;
         return $this;
     }
 
-    public function isMultiple() {
+    public function isMultiple()
+    {
         $this->multiple = 1;
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         $data['choices'] = $this->options;

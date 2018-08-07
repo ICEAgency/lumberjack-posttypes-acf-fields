@@ -12,22 +12,26 @@ class FileField extends Field
     public $max_size = 0;
     public $mime_types;
 
-    public function withMinSize($min_size) {
+    public function withMinSize($min_size)
+    {
         $this->min_size = $min_size;
         return $this;
     }
 
-    public function withMaxSize($max_size) {
+    public function withMaxSize($max_size)
+    {
         $this->max_size = $max_size;
         return $this;
     }
 
-    public function withMimeTypes($mime_types) {
+    public function withMimeTypes($mime_types)
+    {
         $this->mime_types = $mime_types;
         return $this;
     }
 
-    public function withReturnFormat($return_format) {
+    public function withReturnFormat($return_format)
+    {
         if (!in_array($return_format, [
             'array',
             'url',
@@ -40,7 +44,8 @@ class FileField extends Field
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         $data['return_format'] = $this->return_format;

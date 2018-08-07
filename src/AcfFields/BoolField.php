@@ -10,12 +10,14 @@ class BoolField extends Field
 
     public $message;
 
-    public function withMessage($message) {
+    public function withMessage($message)
+    {
         $this->message = $message;
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         if ($this->message) {

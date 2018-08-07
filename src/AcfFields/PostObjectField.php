@@ -13,27 +13,32 @@ class PostObjectField extends Field
     public $multiple = 0;
     public $return_format = 'object';
 
-    public function withPostTypes($post_types) {
+    public function withPostTypes($post_types)
+    {
         $this->post_types = $post_types;
         return $this;
     }
 
-    public function withTaxonomy($taxonomy) {
+    public function withTaxonomy($taxonomy)
+    {
         $this->taxonomy = $taxonomy;
         return $this;
     }
 
-    public function allowNull() {
+    public function allowNull()
+    {
         $this->allow_null = 1;
         return $this;
     }
 
-    public function isMultiple() {
+    public function isMultiple()
+    {
         $this->multiple = 1;
         return $this;
     }
 
-    public function withReturnFormat($return_format) {
+    public function withReturnFormat($return_format)
+    {
         if (!in_array($return_format, [
             'object',
             'id'
@@ -45,10 +50,11 @@ class PostObjectField extends Field
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
-        $data['post_type'] = $this->post_types;
+        $data['post_types'] = $this->post_types;
         $data['taxonomy'] = $this->taxonomy;
         $data['allow_null'] = $this->allow_null;
         $data['multiple'] = $this->multiple;

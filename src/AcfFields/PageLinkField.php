@@ -12,27 +12,32 @@ class PageLinkField extends Field
     public $allow_null = 0;
     public $multiple = 0;
 
-    public function withPostTypes($post_types) {
+    public function withPostTypes($post_types)
+    {
         $this->post_types = $post_types;
         return $this;
     }
 
-    public function withTaxonomy($taxonomy) {
+    public function withTaxonomy($taxonomy)
+    {
         $this->taxonomy = $taxonomy;
         return $this;
     }
 
-    public function allowNull() {
+    public function allowNull()
+    {
         $this->allow_null = 1;
         return $this;
     }
 
-    public function isMultiple() {
+    public function isMultiple()
+    {
         $this->multiple = 1;
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         $data['post_types'] = $this->post_types;

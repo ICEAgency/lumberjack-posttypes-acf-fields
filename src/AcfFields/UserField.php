@@ -11,22 +11,26 @@ class UserField extends Field
     public $allow_null = 0;
     public $multiple = 0;
 
-    public function withRoles($roles) {
+    public function withRoles($roles)
+    {
         $this->roles = $roles;
         return $this;
     }
 
-    public function allowNull() {
+    public function allowNull()
+    {
         $this->allow_null = 1;
         return $this;
     }
 
-    public function isMultiple() {
+    public function isMultiple()
+    {
         $this->multiple = 1;
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         if ($this->roles) {

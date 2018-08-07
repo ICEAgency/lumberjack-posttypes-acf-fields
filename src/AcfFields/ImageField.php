@@ -16,42 +16,50 @@ class ImageField extends Field
     public $max_size = 0;
     public $mime_types;
 
-    public function withMinWidth($min_width) {
+    public function withMinWidth($min_width)
+    {
         $this->min_width = (int)$min_width;
         return $this;
     }
 
-    public function withMinHeight($min_height) {
+    public function withMinHeight($min_height)
+    {
         $this->min_height = (int)$min_height;
         return $this;
     }
 
-    public function withMaxWidth($max_width) {
+    public function withMaxWidth($max_width)
+    {
         $this->max_width = (int)$max_width;
         return $this;
     }
 
-    public function withMaxHeight($max_height) {
+    public function withMaxHeight($max_height)
+    {
         $this->max_height = (int)$max_height;
         return $this;
     }
 
-    public function withMinSize($min_size) {
+    public function withMinSize($min_size)
+    {
         $this->min_size = $min_size;
         return $this;
     }
 
-    public function withMaxSize($max_size) {
+    public function withMaxSize($max_size)
+    {
         $this->max_size = $max_size;
         return $this;
     }
 
-    public function withMimeTypes($mime_types) {
+    public function withMimeTypes($mime_types)
+    {
         $this->mime_types = $mime_types;
         return $this;
     }
 
-    public function withReturnFormat($return_format) {
+    public function withReturnFormat($return_format)
+    {
         if (!in_array($return_format, [
             'array',
             'url',
@@ -64,7 +72,8 @@ class ImageField extends Field
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         $data['return_format'] = $this->return_format;

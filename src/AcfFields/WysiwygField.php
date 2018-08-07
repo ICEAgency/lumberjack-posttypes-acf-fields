@@ -13,7 +13,8 @@ class WysiwygField extends Field
     public $toolbar = 'full';
     public $media_upload = 0;
 
-    public function withTabs($tab_perference) {
+    public function withTabs($tab_perference)
+    {
         if (!in_array($tab_perference, [
             'all',
             'visual',
@@ -26,7 +27,8 @@ class WysiwygField extends Field
         return $this;
     }
 
-    public function withToolbar($toolbar_perference) {
+    public function withToolbar($toolbar_perference)
+    {
         if (!in_array($toolbar_perference, [
             'full',
             'basic'
@@ -38,12 +40,14 @@ class WysiwygField extends Field
         return $this;
     }
 
-    public function canUploadMedia() {
+    public function canUploadMedia()
+    {
         $this->media_upload = 1;
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         if ($this->tabs) {

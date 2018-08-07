@@ -11,22 +11,26 @@ class NumberField extends Field
     public $max;
     public $step;
 
-    public function withMin($min) {
+    public function withMin($min)
+    {
         $this->min = (int)$min;
         return $this;
     }
 
-    public function withMax($max) {
+    public function withMax($max)
+    {
         $this->max = (int)$max;
         return $this;
     }
 
-    public function withStep($step) {
+    public function withStep($step)
+    {
         $this->step = (int)$step;
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = parent::toArray();
 
         if ($this->min) {

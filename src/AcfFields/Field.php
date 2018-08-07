@@ -25,24 +25,34 @@ class Field
     public $disabled;
     public $required = 0;
 
-    public static function create($name) {
+    public static function create($name = '')
+    {
+        if ($name == '') {
+            throw new Exception('An ACF Field must have a name set');
+        }
         $field = new static;
         $field->name = $name;
 
         return $field;
     }
 
-    public function withLabel($label) {
+    public function withLabel($label = '')
+    {
+        if ($label == '') {
+            throw new Exception('An ACF Field must have a label set');
+        }
         $this->label = $label;
         return $this;
     }
 
-    public function isRequired() {
+    public function isRequired()
+    {
         $this->required = 1;
         return $this;
     }
 
-    public function withPlaceholder($placeholder) {
+    public function withPlaceholder($placeholder)
+    {
         if (!in_array(get_class($this), [
             TextField::class,
             TextAreaField::class,
@@ -58,32 +68,36 @@ class Field
         return $this;
     }
 
-    public function withInstructions($instructions) {
+    public function withInstructions($instructions = "")
+    {
         $this->instructions = $instructions;
         return $this;
     }
 
-    public function withDefaultValue($default_value) {
+    public function withDefaultValue($default_value = "")
+    {
         $this->default_value = $default_value;
         return $this;
     }
 
-    public function withMaxLength($max_length) {
+    public function withMaxLength($max_length)
+    {
         if (!in_array(get_class($this), [
-            TextField::$type,
-            TextAreaField::$type
+            TextField::class,
+            TextAreaField::class
         ])) {
             throw new Exception('The field type "' . $this->type . '" does not support withMaxLength()');
         }
 
-        $this->max_length = $max_length;
+        $this->max_length = (int)$max_length;
         return $this;
     }
 
-    public function isReadOnly() {
+    public function isReadOnly()
+    {
         if (!in_array(get_class($this), [
-            TextField::$type,
-            TextAreaField::$type
+            TextField::class,
+            TextAreaField::class
         ])) {
             throw new Exception('The field type "' . $this->type . '" does not support isReadOnly()');
         }
@@ -92,10 +106,11 @@ class Field
         return $this;
     }
 
-    public function isDisabled() {
+    public function isDisabled()
+    {
         if (!in_array(get_class($this), [
-            TextField::$type,
-            TextAreaField::$type
+            TextField::class,
+            TextAreaField::class
         ])) {
             throw new Exception('The field type "' . $this->type . '" does not support isDisabled()');
         }
@@ -104,12 +119,14 @@ class Field
         return $this;
     }
 
-    public function addKey($group_name) {
+    public function addKey($group_name)
+    {
         $this->key = $group_name . "_field_" . $this->name;
         return $this;
     }
 
-    public function toArray() : array {
+    public function toArray() : array
+    {
         $data = [
             'key' => $this->key,
             'name' => $this->name,
